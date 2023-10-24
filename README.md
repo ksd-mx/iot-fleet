@@ -1,1 +1,1 @@
-# iot-fleet-poc
+# iot-fleet-deploy
