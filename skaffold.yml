@@ -1,0 +1,26 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+metadata:
+  name: iot-fleet
+build:
+  local:
+    push: true
+  artifacts:
+    # - image: edge-journey-engine-service
+    #   context: ./services/journey-engine
+    #   docker:
+    #     dockerfile: Dockerfile.dev
+    #   sync:
+    #     manual:
+    #       - src: "**/*.*"
+    #         dest: .
+deploy:
+  helm:
+   releases:
+    # - name: journey-engine-service
+    #   chartPath: k8s/charts/edge/journey-engine
+    #   valuesFiles:
+    #     - k8s/charts/edge/journey-engine/values/values.dev.yaml
+    #   setValueTemplates:
+    #     image.repository: $JOURNEY_ENGINE_SERVICE_IMAGE_NAME
+    #   namespace: edge
